@@ -19,7 +19,7 @@ interface IAppDownload {
 
 export default function AppDownload (props: IAppDownload) {
   return (
-    <LayoutStore title={props.title} description={props.category}>
+    <LayoutStore title={props.title} description={props.sobre}>
       <div className={styles.page}>
         <CardDownloadApp
           title={props.title}
