@@ -1,4 +1,4 @@
-import { getDatabase, onValue, ref } from 'firebase/database'
+import axios from 'axios'
 import { NextPageContext } from 'next'
 import Image from 'next/image'
 import CardDownloadApp from '../../../../src/components/CardDownloadApp'
@@ -19,7 +19,7 @@ interface IAppDownload {
 
 export default function AppDownload (props: IAppDownload) {
   return (
-    <LayoutStore title='tete' description='tetetetet'>
+    <LayoutStore title={props.title} description={props.category}>
       <div className={styles.page}>
         <CardDownloadApp
           title={props.title}
@@ -71,24 +71,30 @@ export async function getServerSideProps (ctx: NextPageContext) {
     }
   }
 
-  const db = getDatabase()
+  try {
+    const url = `https://store-39f28-default-rtdb.firebaseio.com/aplicativos/${id?.toString().replaceAll('.', '-')}/.json`
 
-  const starCountRef = ref(db, 'aplicativos/' + id?.toString().replaceAll('.', '-'))
-  let app: any
-  onValue(starCountRef, (snapshot) => { app = snapshot.val() })
-  console.log(app.title)
+    const { data } = await axios.get(url)
 
-  return {
-    props: {
-      title: app.title,
-      icon: app.icon,
-      prints: app.prints,
-      urlDownload: app.urlDownload,
-      size: app.size,
-      star: app.star,
-      download: app.download,
-      category: app.category,
-      sobre: app.sobre
+    return {
+      props: {
+        title: data.title,
+        icon: data.icon,
+        prints: data.prints,
+        urlDownload: data.urlDownload,
+        size: data.size,
+        star: data.star,
+        download: data.download,
+        category: data.category,
+        sobre: data.sobre
+      }
+    }
+  } catch {
+    return {
+      redirect: {
+        destination: '/notfound',
+        permanent: false
+      }
     }
   }
 
