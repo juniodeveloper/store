@@ -7,7 +7,7 @@
   align-items: center;
   width: 100%;
   background-color: white;
-  box-shadow: 1 px 1 px 1 px 1 px rgba(0, 0, 0, .1);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .1);
 }
 
 .header img {

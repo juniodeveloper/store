@@ -1,0 +1,11 @@
+.img {
+  display: block;
+  margin: auto;
+}
+
+.title {
+  display: block;
+  margin: auto;
+  text-align: center;
+  color: var(--color-1);
+}
