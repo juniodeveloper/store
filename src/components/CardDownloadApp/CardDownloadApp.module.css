@@ -1,0 +1,83 @@
+.card {
+  padding: 8px;
+}
+
+.appInfo {
+  display: flex;
+
+}
+
+.appInfo .icon {
+  border-radius: 15px;
+  margin-right: 8px;
+}
+
+.textInfo .title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-1);
+  display: block;
+}
+
+.textInfo .author {
+  font-size: 1.1em;
+  color: var(--color-2);
+  display: block;
+}
+
+.textInfo .info {
+  color: rgba(0, 0, 0, .54);
+}
+
+.listInforApp {
+  padding: 0px;
+  margin: 30px 0px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listInforApp .icon {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+  color: rgba(0, 0, 0, 0.60);
+}
+
+.listInforApp li {
+  margin: none;
+  padding: none;
+  align-items: center;
+  display: inline-block;
+}
+
+.listInforApp li div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listInforApp li div span {
+  color: rgba(0, 0, 0, 0.50);
+  font-size: .7rem;
+}
+
+.listInforApp li div h4 {
+  padding: 0px;
+  margin: 0px;
+  color: var(--color-1);
+}
+
+.card button {
+  width: 100%;
+  max-width: 400px;
+  min-height: 50px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: var(--color-2);
+}
+

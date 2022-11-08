@@ -1,0 +1,48 @@
+.page {
+  padding: 10px;
+}
+
+.listPrints {
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+  padding-top: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.listPrints::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.listPrints li {
+  margin: 0px 2px;
+  max-height: 400px;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 8px;
+  -webkit-box-shadow: 1px -1px 8px 1px rgba(0, 0, 0, 0.10);
+  -moz-box-shadow: 1px -1px 8px 1px rgba(0, 0, 0, 0.10);
+  box-shadow: 1px -1px 8px 1px rgba(0, 0, 0, 0.10);
+}
+
+.page h2 {
+  margin-top: 15px;
+  color: var(--color-1);
+}
+
+.page .sobre {
+  font-size: .95rem;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.category {
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  margin-top: 15px;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.54);
+}

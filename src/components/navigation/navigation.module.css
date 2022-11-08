@@ -1,0 +1,29 @@
+.header nav {
+  width: 100%;
+  max-height: 60px;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  box-shadow: 1 px 1 px 1 px 1 px rgba(0, 0, 0, .1);
+}
+
+.header img {
+  padding: 8px;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo strong {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, .54);
+}
+ .avatar {
+  background-color: var(--color-1);
+  color: white;
+ }
