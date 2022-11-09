@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { NextPageContext } from 'next'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import CardDownloadApp from '../../../../src/components/CardDownloadApp'
 import LayoutStore from '../../../../src/layouts/LayoutStore'
 import styles from '../../../../styles/pages/AppDownload.module.css'
@@ -18,6 +19,11 @@ interface IAppDownload {
 }
 
 export default function AppDownload (props: IAppDownload) {
+
+  const router = useRouter()
+
+  console.log(router.query)
+
   return (
     <LayoutStore title={props.title} description={props.sobre}>
       <div className={styles.page}>
